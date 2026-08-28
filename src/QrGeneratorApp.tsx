@@ -1,1 +1,7 @@
-export default function QrGeneratorApp() { return <div>QrGenerator placeholder</div>; }
+"use client";
+
+import QRCodeGenerator from "./components/QRCodeGenerator";
+
+export default function QrGeneratorApp() {
+	return <QRCodeGenerator />;
+}
