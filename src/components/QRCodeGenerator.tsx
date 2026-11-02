@@ -46,19 +46,13 @@ export default function QRCodeGenerator() {
 	return (
 		<div className="fixed inset-0 w-screen h-dvh z-[9999] bg-white text-black font-sans overflow-y-auto p-8">
 			<div style={{ maxWidth: "900px", margin: "0 auto" }}>
-				<nav
-					style={{ fontSize: "0.85rem", marginBottom: "1rem", color: "#666" }}
-				>
-					<a href="/" style={{ color: "#0066cc", textDecoration: "none" }}>
-						Home
-					</a>
-					<span style={{ margin: "0 8px" }}>/</span>
-					<a href="/tools" style={{ color: "#0066cc", textDecoration: "none" }}>
-						Tools
-					</a>
-					<span style={{ margin: "0 8px" }}>/</span>
-					<span style={{ color: "#000" }}>QR Code Generator</span>
-				</nav>
+				{/*
+				 * The breadcrumb that used to live here linked to the host
+				 * routes (`/` and `/tools`). Inside the embedding iframe those
+				 * targets are not the tool, so following them would navigate the
+				 * frame away from the app. The heading below carries the same
+				 * title, so the breadcrumb is dropped instead of repointed.
+				 */}
 
 				<h1
 					style={{
