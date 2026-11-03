@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import QrGeneratorApp from "./QrGeneratorApp";
+import "./styles.css";
 
 const container = document.getElementById("root");
 

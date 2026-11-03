@@ -1,0 +1,27 @@
+/*
+ * Self-contained styles for the standalone build.
+ *
+ * The generator uses a two-column layout on wide viewports. The columns
+ * are held at their min-content width (settings fieldset + 256px QR
+ * canvas), which is wider than a 390px phone viewport, so below the
+ * two-column breakpoint the layout stacks into one column instead of
+ * overflowing the frame (Issue #5 / host #867).
+ */
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.qr-layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+}
+
+@media (max-width: 767px) {
+	.qr-layout {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}

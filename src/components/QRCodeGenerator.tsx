@@ -66,13 +66,7 @@ export default function QRCodeGenerator() {
 					QR Code Generator
 				</h1>
 
-				<div
-					style={{
-						display: "grid",
-						gridTemplateColumns: "1fr 1fr",
-						gap: "40px",
-					}}
-				>
+				<div className="qr-layout">
 					<div>
 						<QRInputSettings
 							inputType={inputType}
