@@ -43,8 +43,17 @@ export default function QRCodeGenerator() {
 		setBackgroundColor(DEFAULT_BACKGROUND);
 	}, []);
 
+	/*
+	 * `box-border` on the shell is load-bearing: `w-screen` (100vw) plus
+	 * `p-8` (2rem) with the UA default `content-box` made the shell
+	 * 100vw + 64px wide, so the whole app was offset 32px and the right
+	 * edge was clipped by the frame (measured 2026-11-10 on
+	 * my-web-2026#910: `getBoundingClientRect().right = 454` at a 390px
+	 * frame, `1504` at 1440px). `styles.css` provides the utility; the
+	 * shell has to declare it.
+	 */
 	return (
-		<div className="fixed inset-0 w-screen h-dvh z-[9999] bg-white text-black font-sans overflow-y-auto p-8">
+		<div className="fixed inset-0 w-screen h-dvh z-[9999] bg-white text-black font-sans overflow-y-auto p-8 box-border">
 			<div style={{ maxWidth: "900px", margin: "0 auto" }}>
 				{/*
 				 * The breadcrumb that used to live here linked to the host

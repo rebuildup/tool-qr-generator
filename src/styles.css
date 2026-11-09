@@ -25,3 +25,101 @@ body {
 		gap: 20px;
 	}
 }
+
+/*
+ * The display panel (QRCodeDisplay) and the fullscreen app shell
+ * (QRCodeGenerator) are written with Tailwind utility class names that
+ * the my-web-2025 host used to supply (host app.css, Tailwind v4
+ * split-imported without preflight). The standalone build has no host,
+ * so those names resolved to nothing: the panel rendered transparent
+ * with `min-height: auto` and the app shell rendered as a plain block
+ * (measured for my-web-2026#910: display:block, background transparent,
+ * min-height auto). The utilities the source declares are provided here
+ * — the same subset, not a full Tailwind build.
+ */
+.w-full {
+	width: 100%;
+}
+.bg-\[\#f9f9f9\] {
+	background-color: #f9f9f9;
+}
+.border {
+	border-width: 1px;
+}
+.border-\[\#eee\] {
+	border-color: #eee;
+}
+.border-\[\#ddd\] {
+	border-color: #ddd;
+}
+.flex {
+	display: flex;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.gap-5 {
+	gap: 1.25rem;
+}
+.gap-2\.5 {
+	gap: 0.625rem;
+}
+.items-center {
+	align-items: center;
+}
+.justify-center {
+	justify-content: center;
+}
+.p-5 {
+	padding: 1.25rem;
+}
+.box-border {
+	box-sizing: border-box;
+}
+.min-h-\[300px\] {
+	min-height: 300px;
+}
+.overflow-y-auto {
+	overflow-y: auto;
+}
+.flex-1 {
+	flex: 1 1 0%;
+}
+.flex-col {
+	flex-direction: column;
+}
+.bg-white {
+	background-color: #fff;
+}
+.p-2\.5 {
+	padding: 0.625rem;
+}
+.shadow-\[0_2px_4px_rgba\(0\,0\,0\,0\.05\)\] {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.fixed {
+	position: fixed;
+}
+.inset-0 {
+	inset: 0;
+}
+.w-screen {
+	width: 100vw;
+}
+.h-dvh {
+	height: 100dvh;
+}
+.z-\[9999\] {
+	z-index: 9999;
+}
+.font-sans {
+	font-family:
+		ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+		"Segoe UI Emoji";
+}
+.text-black {
+	color: #000;
+}
+.p-8 {
+	padding: 2rem;
+}
